@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <link rel="stylesheet" href="styles/mainstyles.css">
+    <style>
+        img {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Főoldal</a>
+        <a href="angular.html">Angular</a>
+        <a class="active" href="react.html">React</a>
+        <a href="questionnaire.html">Kérdőív</a>
+        
+    </div>
+
+    <div class="maintitle">
+        <h1>React</h1>
+    </div>
+
+    <div class="maincontainer">
+        <div>
+            <h2>Mi az a React?</h2>
+            <img src="imgs/react_logo.png" alt="React logo." width="250px" height="200px" align="left" style="margin-right:2vw;">
+            <p>A React (React.js vagy ReactJS néven is ismert) egy ingyenes és nyílt forráskódú front-end JavaScript könyvtár, amely
+                felhasználói felületeket készít UI-komponensek alapján. A Meta (korábban Facebook) és egy egyéni fejlesztőkből és
+                vállalatokból álló közösség tartja fenn. A React alapként használható egyoldalas, mobil vagy szerverre renderelt
+                alkalmazások fejlesztéséhez olyan keretrendszerekkel, mint a Next.js.
+            </p>
+            <p>
+                A React azonban csak az állapotkezeléssel és ennek az állapotnak a DOM-ra történő megjelenítésével foglalkozik, így a
+                React alkalmazások létrehozása általában
+                további könyvtárak használatát igényli az útválasztáshoz, valamint bizonyos kliensoldali funkciókat.
+                A React olyan keretrendszerek alternatívája, mint az Angular és a Vue,
+                amelyek mindegyike lehetővé teszi komplex funkciók létrehozását.
+            </p>
+            <p>
+                A React egy VIRTUÁLIS DOM-ot hoz létre a memóriában.
+                Ahelyett, hogy közvetlenül a böngésző DOM-ját manipulálná, a React egy virtuális DOM-ot hoz létre a memóriában, ahol
+                minden szükséges manipulációt elvégez, mielőtt a változásokat a böngésző DOM-jában végrehajtaná.
+                A React kideríti, hogy milyen módosítások történtek, és csak azt változtatja meg, amit meg kell változtatni.
+            </p>
+        </div>
+        <div>
+            <h2>JSX</h2>
+            <img src="imgs/react_jsx.png" alt="React jsx." width="500px" height="250px" align="right" style="margin-left:2vw;">
+            <p>
+                A JSX egy JavaScript szintaxisbővítmény, amelyet a React elemkészítés során használnak a fejlesztők HTML-kód
+                JavaScript-objektumokba való beágyazására, mivel a JSX elfogadja az érvényes JavaScript-kifejezéseket és
+                a függvénybeágyazást, valamint egyszerűsítheti az összetett kódstruktúrákat.
+            </p>
+            <p>
+                A JSX segít a Cross-Site Scripting (XSS) támadások leküzdésében is. Alapértelmezés szerint a React DOM a JSX-be ágyazott
+                értékeket a renderelés előtt karakterláncokká alakítja. Következésképpen harmadik felek nem tudnak extra kódot
+                bejuttatni a felhasználói bemeneten keresztül, kivéve, ha az kifejezetten az alkalmazásba van írva.
+            </p>
+        </div>
+        <div>
+            <h2>Virtuális DOM</h2>
+            <img src="imgs/react_virtualDOM.jpg" alt="React jsx." width="500px" height="300px" align="left" style="margin-right:2vw;">
+            <p>
+              A Document Object Model (DOM) egy weboldalt, egy adatfaszerkezetben jelenít meg. A ReactJS a Virtual DOM fákat a
+              memóriában tárolja. Ezáltal a React képes frissítéseket alkalmazni az adatfa meghatározott részeire, ami gyorsabb, mint
+              a DOM fa egészének újrarendezése.
+            </p>
+            <p>
+                Amikor az adatokban változás történik, a ReactJS új Virtuális DOM-fát generál, és összehasonlítja azt az előzővel,
+                hogy
+                megtalálja a lehető leggyorsabb módját a változások valós DOM-ban történő végrehajtásához. Ezt a folyamatot
+                "diffingnek" nevezzük.
+            </p>
+            <p>
+                Azzal, hogy az UI manipulációja csak a valós DOM-fa meghatározott szakaszait érinti, a frissített változat
+                renderelése kevesebb időt vesz igénybe és kevesebb erőforrást használ. Ez a gyakorlat nagymértékben előnyös az intenzív
+                felhasználóiint erakcióval járó nagy projektek számára.
+            </p>
+          </div>
+          <div>
+            <h2 style="text-align: center;">Verziók</h2>
+            <table>
+                <tr>
+                  <th>Kiadás</th>
+                  <th>Kiadás dátuma</th>
+                  <th>Kiadás utolsó verziószáma</th>
+                  <th>Támogatás dátuma</th>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>2022.03.39.</td>
+                  <td>18.2.0</td>
+                  <td>~</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>2020.10.20.</td>
+                  <td>17.0.2</td>
+                  <td>2022.03.29.</td>
+                </tr>
+              </table>
+          </div>
+    </div>
+
+    <div class="footer">
+        <p><a href="questionnaire.html#sources">Források</a></p>
+        <p>©Juhász Marcell Tibor</p>
+        <p>Programtervező informatikus</p>
+    </div>
+</body>
+
+</html>

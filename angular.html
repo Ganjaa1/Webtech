@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular keretrendszer</title>
+  <link rel="stylesheet" href="styles/mainstyles.css">
+  <link rel="stylesheet" href="styles/angularstyles.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="index.html">Főoldal</a>
+    <a class="active" href="angular.html">Angular</a>
+    <a href="react.html">React</a>
+    <a href="questionnaire.html">Kérdőív</a>
+  </div>
+
+  <div class="maintitle">
+    <h1>Angular</h1>
+  </div>
+
+  <div class="maincontainer">
+    <div>
+      <img src="imgs/angular_logo.png" alt="Angular logo." width="300px" height="300px" align="right">
+      <h2>Mi az az Angular?</h2>
+      <p>Az Angular egy TypeScript-alapú ingyenes és nyílt forráskódú webalkalmazás-keretrendszer, amelyet a Google
+        Angular
+        csapata, valamint egyénekből és vállalatokból álló közösség vezet.
+        Az Angular egy teljes újraírása ugyanazon csapattól, amely az AngularJS-t építette.
+      </p>
+      <p>
+        Komponensalapú keretrendszer skálázható webes alkalmazások építéséhez.
+        Jól integrált könyvtárak gyűjteménye található meg, amelyek a funkciók széles skáláját fedik le, beleértve az
+        útválasztást, az űrlapkezelést, az ügyfél-kiszolgáló kommunikációt és még sok mást.
+        Fejlesztői eszközkészlet, amely segíti a kód fejlesztését, építését, tesztelését és frissítését.
+        Az Angularral egy olyan platform előnyeit használhatjuk ki, amely az egy fejlesztőre szabott projektektől a
+        vállalati
+        szintű alkalmazásokig skálázható. Az Angular úgy lett kialakítva, hogy a frissítés a lehető legegyszerűbb
+        legyen, így
+        minimális erőfeszítéssel kihasználhatja a legújabb fejlesztések előnyeit. A legjobb az egészben, hogy az Angular
+        ökoszisztéma több mint 1,7 millió fejlesztő, könyvtárszerző és tartalomkészítő változatos csoportjából áll.
+      </p>
+    </div>
+    <div>
+      <h2>Komponensek</h2>
+      <img src="imgs/angular_component.png" alt="Angular komponens." width="300px" height="200px" align="left"
+        style="margin-right: 2vw;">
+      <p>
+        A komponensek azok az építőelemek, amelyek egy alkalmazást alkotnak. Egy komponens tartalmaz egy TypeScript
+        osztályt egy <strong>@Component()</strong> dekorátorral, egy HTML-sablont és stílusokat. A @Component() dekorátor a
+        következő Angular-specifikus információkat adja meg:
+      <ul>
+        <li>Egy CSS-szelektor, amely meghatározza, hogy a komponens hogyan kerül felhasználásra egy sablonban. A
+          sablonban
+          lévő
+          HTML-elemek, amelyek megfelelnek ennek a szelektornak, a komponens példányai lesznek.
+        </li>
+        <li>
+          Egy HTML sablon, amely utasítja az Angular-t, hogyan kell megjeleníteni a komponenst.
+        </li>
+        <li>
+          Egy opcionális CSS-stíluskészlet, amely meghatározza a sablon HTML-elemeinek megjelenését.
+        </li>
+      </ul>
+      Az Angular komponensmodellje erős kapszulázást és intuitív alkalmazásstruktúrát kínál. A komponensek segítségével
+      az
+      alkalmazásunkat könnyedén tesztelhetjük, és javíthatjuk a kódod általános olvashatóságát.
+      </p>
+    </div>
+    <div>
+      <h2>Sablonok</h2>
+      <img src="imgs/angular_template.png" alt="Angular sablon." width="300px" height="200px" align="right"
+        style="margin-left: 2vw;">
+      <p>
+        Minden komponensnek van egy HTML sablonja, amely meghatározza, hogy az adott komponens hogyan jelenik meg. Ezt a
+        sablont
+        vagy soron belül, vagy a fájl elérési útvonala alapján határozza meg.
+      </p>
+      <p>
+        Egy Angular HTML-sablon egy nézetet vagy felhasználói felületet jelenít meg a böngészőben, ugyanúgy, mint a hagyományos
+        HTML, de sokkal több funkcióval.
+        Az Angular olyan szintaxis elemeket ad hozzá, amelyek kiterjesztik a HTML-t, így dinamikus értékeket illeszthetünk
+        be a
+        komponensből. Az Angular automatikusan frissíti a renderelt DOM-ot, amikor a komponensünk állapota megváltozik.
+      </p>
+      <p>
+        Amikor az Angular CLI-vel Angular alkalmazást hozunk létre, az app.component.html fájl az alapértelmezett sablon, amely
+        helyőrző HTML-t tartalmaz.
+        A sablon szintaxis útmutatói megmutatják, hogyan lehet az UX/UI-t irányítani az osztály és a sablon közötti adatok
+        koordinálásával.
+      </p>
+    </div>
+    <div>
+      <h2>Függőségek injektálása</h2>
+      <img src="imgs/angular_dep_injection.png" alt="Angular függőségek." width="300px" height="200px" align="left"
+        style="margin-right: 2vw;">
+      <p>
+        A függőségi injektálás lehetővé teszi, hogy a TypeScript osztályok függőségeit deklaráljuk anélkül, hogy
+        gondoskodnánk
+        azok példányosításáról. Ehelyett az Angular gondoskodik helyettünk a példányosításról. Ezzel a tervezési
+        mintával
+        tesztelhetőbb és rugalmasabb kódot írhatunk.
+      </p>
+      <p>
+        A függőségi injektálás megértése nem kritikus az Angular
+        használatának
+        megkezdéséhez, de mint legjobb gyakorlat erősen ajánlott. Az Angular számos aspektusa kihasználja valamilyen
+        mértékben.
+      </p>
+      <p>
+        Amikor egy függőséget kérünk, az injektor ellenőrzi a nyilvántartását, hogy van-e már ott egy példány. Ha nem, akkor egy
+        új példányt hoz létre és tárol a nyilvántartásban. Az Angular létrehoz egy egész alkalmazásra kiterjedő injektort (más
+        néven "gyökér" injektort) az alkalmazás bootstrap folyamata során, valamint szükség szerint további injektorokat. A
+        legtöbb esetben nem kell manuálisan létrehozni az injektorokat, de tudni kell, hogy van egy réteg, amely összeköti a
+        szolgáltatókat és a fogyasztókat.
+      </p>
+    </div>
+    <div>
+      <h2 style="text-align: center;">Veziók</h2>
+      <table>
+        <tr>
+          <th>Kiadás</th>
+          <th>Kiadás dátuma</th>
+          <th>Kiadás utolsó verziószáma</th>
+          <th>Támogatás dátuma</th>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>2022.06.02.</td>
+          <td>14.2.7</td>
+          <td>2023.12.02.</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>2021.10.03.</td>
+          <td>13.3.11</td>
+          <td>2023.05.04.</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>2021.05.13.</td>
+          <td>13.2.16</td>
+          <td>2022.10.12.</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>2020.10.11.</td>
+          <td>11.2.14</td>
+          <td>2022.05.11.</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>2020.06.24.</td>
+          <td>10.2.5</td>
+          <td>2021.12.24.</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>2020.02.06</td>
+          <td>9.1.13</td>
+          <td>2020.08.06.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><a href="questionnairex.html#sources">Források</a></p>
+    <p>©Juhász Marcell Tibor</p>
+    <p>Programtervező informatikus</p>
+  </div>
+</body>
+
+</html>

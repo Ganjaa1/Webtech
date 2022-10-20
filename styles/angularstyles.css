@@ -1,0 +1,12 @@
+ul {
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .maincontainer > div:last-child{
+    margin-bottom: 5vh;
+  }
+
+  img{
+    border-radius:10px;
+  }

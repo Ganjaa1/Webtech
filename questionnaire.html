@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zárólap</title>
+    <link rel="stylesheet" href="styles/mainstyles.css">
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 25vw;
+            justify-content: center;
+            margin-bottom: 50px;
+            gap:1vh;
+        }
+        input{
+            border-radius: 5px;
+        }
+        button{
+            border-radius: 5px;
+        }
+        textarea{
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function validateForm(){
+            let name = document.getElementById("nameInput");
+            let date = document.getElementById("dateInput");
+            if(name.value == ""){ alert("A név mező kitöltése kötelező!");}
+            else if(date.value == ""){ alert("A dátum megadása kötelező!");}
+            else{ document.getElementById("Form").reset();alert("A form adatai törlődtek!");}
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Főoldal</a>
+        <a href="angular.html">Angular</a>
+        <a href="react.html">React</a>
+        <a class="active" href="questionnaire.html">Kérdőív</a>
+    </div>
+
+  <div class="maintitle">
+    <h1>Kérdőív</h1>
+  </div>
+
+    <div class="maincontainer">
+
+        <div>
+            <form id="Form">
+                    <label>Név: </label>
+                    <input id="nameInput" type="text">
+                    <label>Születési év:</label>
+                    <input id="dateInput" type="date">
+                    <label>Értékelés</label>
+                    <input type="range" value="3" min="1" max="5" oninput="this.nextElementSibling.value = this.value">
+                    <output>3</output>
+                    <label>Megjegyzés</label>
+                    <textarea id="textBox" rows="6" cols="30"></textarea>
+                    <button onclick="validateForm()">Küldés</button>
+            </form>
+        </div>
+
+        <div>
+            <h2 #sources>FORRÁSOK</h2>
+            <p><a href="https://angular.io/" target="_blank">https://angular.io/</a></p>
+            <p><a href="https://tanfolyamokj.hu/blog/mi-kell-ahhoz-hogy-front-end-fejleszto-lehessek/" target="_blank">https://tanfolyamokj.hu/blog/mi-kell-ahhoz-hogy-front-end-fejleszto-lehessek/</a></p>
+            <p><a href="https://reactjs.org/" target="_blank">https://reactjs.org/</a></p>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p><a href="questionnaire.html#sources">Források</a></p>
+        <p>©Juhász Marcell Tibor</p>
+        <p>Programtervező informatikus</p>
+      </div>
+</body>
+</html>
