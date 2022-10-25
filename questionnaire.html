@@ -8,33 +8,43 @@
     <title>Zárólap</title>
     <link rel="stylesheet" href="styles/mainstyles.css">
     <style>
-        form{
+        form {
             display: flex;
             flex-direction: column;
             text-align: center;
             width: 25vw;
             justify-content: center;
             margin-bottom: 50px;
-            gap:1vh;
+            gap: 1vh;
         }
-        input{
+
+        input {
             border-radius: 5px;
         }
-        button{
+
+        button {
             border-radius: 5px;
         }
-        textarea{
+
+        textarea {
             border-radius: 5px;
         }
     </style>
     <script>
-        function validateForm(){
+        function validateForm() {
             let name = document.getElementById("nameInput");
             let date = document.getElementById("dateInput");
-            if(name.value == ""){ alert("A név mező kitöltése kötelező!");}
-            else if(date.value == ""){ alert("A dátum megadása kötelező!");}
-            else{ document.getElementById("Form").reset();alert("A form adatai törlődtek!");}
-            
+            let rating = document.getElementById("rating");
+            let description = document.getElementById("descripton");
+            if (name.value == "") { alert("A név mező kitöltése kötelező!"); }
+            else if (date.value == "") { alert("A dátum megadása kötelező!"); }
+            else { document.getElementById("Form").reset(); alert("A form adatai törlődtek!"); }
+            localStorage["question"] = {
+                "name": name,
+                "date": date,
+                "rating": rating,
+                "description": description
+            }
         }
     </script>
 </head>
@@ -47,31 +57,34 @@
         <a class="active" href="questionnaire.html">Kérdőív</a>
     </div>
 
-  <div class="maintitle">
-    <h1>Kérdőív</h1>
-  </div>
+    <div class="maintitle">
+        <h1>Kérdőív</h1>
+    </div>
 
     <div class="maincontainer">
 
         <div>
             <form id="Form">
-                    <label>Név: </label>
-                    <input id="nameInput" type="text">
-                    <label>Születési év:</label>
-                    <input id="dateInput" type="date">
-                    <label>Értékelés</label>
-                    <input type="range" value="3" min="1" max="5" oninput="this.nextElementSibling.value = this.value">
-                    <output>3</output>
-                    <label>Megjegyzés</label>
-                    <textarea id="textBox" rows="6" cols="30"></textarea>
-                    <button onclick="validateForm()">Küldés</button>
+                <label>Név: </label>
+                <input id="nameInput" type="text">
+                <label>Születési év:</label>
+                <input id="dateInput" type="date">
+                <label>Értékelés</label>
+                <input id="rating" type="range" value="3" min="1" max="5"
+                    oninput="this.nextElementSibling.value = this.value">
+                <output>3</output>
+                <label>Megjegyzés</label>
+                <textarea id="description" rows="6" cols="30"></textarea>
+                <button onclick="validateForm()">Küldés</button>
             </form>
         </div>
 
         <div>
             <h2 #sources>FORRÁSOK</h2>
             <p><a href="https://angular.io/" target="_blank">https://angular.io/</a></p>
-            <p><a href="https://tanfolyamokj.hu/blog/mi-kell-ahhoz-hogy-front-end-fejleszto-lehessek/" target="_blank">https://tanfolyamokj.hu/blog/mi-kell-ahhoz-hogy-front-end-fejleszto-lehessek/</a></p>
+            <p><a href="https://tanfolyamokj.hu/blog/mi-kell-ahhoz-hogy-front-end-fejleszto-lehessek/"
+                    target="_blank">https://tanfolyamokj.hu/blog/mi-kell-ahhoz-hogy-front-end-fejleszto-lehessek/</a>
+            </p>
             <p><a href="https://reactjs.org/" target="_blank">https://reactjs.org/</a></p>
         </div>
     </div>
@@ -81,6 +94,7 @@
         <p><a href="questionnaire.html#sources">Források</a></p>
         <p>©Juhász Marcell Tibor</p>
         <p>Programtervező informatikus</p>
-      </div>
+    </div>
 </body>
+
 </html>
